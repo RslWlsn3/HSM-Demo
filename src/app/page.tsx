@@ -1,8 +1,6 @@
 // src/app/page.tsx
-
-import Dashboard from "@/components/Dashboard";
-
+import { redirect } from 'next/navigation'
 
 export default function Home() {
-  return <Dashboard />
+  redirect('/overview')  // This matches your overview page path
 }

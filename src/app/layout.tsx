@@ -1,31 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Configure the fonts using next/font/google
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["400", "700"], // Adjust weights if necessary
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
+  weight: ["400", "700"], // Adjust weights if necessary
 });
 
+// Metadata for the application
 export const metadata: Metadata = {
-  title: "HTM Dashboard",
+  title: "Sidekick Dashboard",
   description: "Healthcare Technology Management Dashboard",
 };
 
+// Root layout component
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans min-h-screen bg-background antialiased`}
+        className={`${roboto.variable} ${robotoMono.variable} font-sans min-h-screen bg-background antialiased`}
       >
         {children}
       </body>

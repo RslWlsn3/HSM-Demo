@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BadgeDelta, AreaChart, DonutChart, BarChart, Legend } from "@tremor/react";
 import { BellRing, Calendar, Cpu, Shield, Wrench } from 'lucide-react';
 
-export default function DashboardPage() {
+export default function OverviewPage() {
   const maintenanceData = [
     { date: "Jan 23", "Completed": 12, "Scheduled": 18, "Overdue": 5 },
     { date: "Feb 23", "Completed": 15, "Scheduled": 20, "Overdue": 4 },

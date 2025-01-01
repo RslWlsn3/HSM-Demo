@@ -1,16 +1,16 @@
-import type { Config } from "tailwindcss";
-import animate from "tailwindcss-animate";
-
-const config: Config = {
-  darkMode: ["class"],
+/** @type {import('tailwindcss').Config} */
+const config = {
+  darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
-	],
+    './node_modules/@tremor/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
+    transparent: "transparent",
+    current: "currentColor",
     container: {
       center: true,
       padding: "2rem",
@@ -141,8 +141,9 @@ const config: Config = {
       pattern:
         /^(fill-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
     },
+    { pattern: /^tremor\-/ },
   ],
-  plugins: [animate],
+  plugins: [require('tailwindcss-animate')],
 };
 
-export default config;
+module.exports = config;
