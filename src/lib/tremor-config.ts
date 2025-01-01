@@ -1,5 +1,3 @@
-import { color } from "@tremor/react";
-
 export const chartColors = {
   main: ["emerald", "blue", "rose"],
   status: ["emerald", "amber", "rose", "slate"],
